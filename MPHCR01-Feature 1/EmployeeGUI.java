@@ -20,8 +20,8 @@ public class EmployeeGUI extends JFrame {
     private JTextField txtEmpNo = new JTextField();
     private JTextField txtFirstName = new JTextField();
     private JTextField txtLastName = new JTextField();
-    private JTextField txtFromDate = new JTextField();
-    private JTextField txtToDate = new JTextField();
+    private JSpinner txtFromDate;
+    private JSpinner txtToDate;
 
     private JButton btnSearch = new JButton("Search");
 
@@ -44,6 +44,20 @@ public class EmployeeGUI extends JFrame {
                 BorderFactory.createEmptyBorder(10, 10, 10, 10)
         );
 
+        // DATE SPINNERS
+        txtFromDate = new JSpinner(new SpinnerDateModel());
+        txtToDate = new JSpinner(new SpinnerDateModel());
+
+        // DATE FORMAT
+        JSpinner.DateEditor fromEditor =
+                new JSpinner.DateEditor(txtFromDate, "MM/dd/yyyy");
+
+        JSpinner.DateEditor toEditor =
+                new JSpinner.DateEditor(txtToDate, "MM/dd/yyyy");
+
+        txtFromDate.setEditor(fromEditor);
+        txtToDate.setEditor(toEditor);
+
         // UI COMPONENTS
         add(new JLabel("Employee Number:"));
         add(txtEmpNo);
@@ -54,10 +68,10 @@ public class EmployeeGUI extends JFrame {
         add(new JLabel("Last Name:"));
         add(txtLastName);
 
-        add(new JLabel("Pay Coverage From (MM/DD/YYYY):"));
+        add(new JLabel("Pay Coverage From:"));
         add(txtFromDate);
 
-        add(new JLabel("Pay Coverage To (MM/DD/YYYY):"));
+        add(new JLabel("Pay Coverage To:"));
         add(txtToDate);
 
         add(new JLabel());
@@ -77,14 +91,29 @@ public class EmployeeGUI extends JFrame {
             int empNo = Integer.parseInt(txtEmpNo.getText().trim());
             String firstName = txtFirstName.getText().trim();
             String lastName = txtLastName.getText().trim();
-            String fromDate = txtFromDate.getText().trim();
-            String toDate = txtToDate.getText().trim();
+            java.util.Date from = (java.util.Date) txtFromDate.getValue();
+            java.util.Date to = (java.util.Date) txtToDate.getValue();
+
+            if (from.after(to)) {
+
+                JOptionPane.showMessageDialog(this,
+                        "Invalid date range.",
+                        "Date Range Error",
+                        JOptionPane.ERROR_MESSAGE);
+
+                return;
+            }
+
+            java.text.SimpleDateFormat sdf =
+                    new java.text.SimpleDateFormat("MM/dd/yyyy");
+
+            String fromDate = sdf.format(from);
+            String toDate = sdf.format(to);
 
             // =========================
             // VALIDATION PATTERNS
             // =========================
             String namePattern = "^[a-zA-Z\\s]+$";
-            String datePattern = "\\d{2}/\\d{2}/\\d{4}";
 
             // NAME VALIDATION
             if (!firstName.matches(namePattern) || !lastName.matches(namePattern)) {
@@ -107,15 +136,6 @@ public class EmployeeGUI extends JFrame {
                 return;
             }
 
-            // DATE FORMAT VALIDATION
-            if (!fromDate.matches(datePattern) || !toDate.matches(datePattern)) {
-
-                JOptionPane.showMessageDialog(this,
-                        "Dates must follow MM/DD/YYYY format.",
-                        "Input Error",
-                        JOptionPane.ERROR_MESSAGE);
-                return;
-            }
 
             // FULL NAME BUILD
             String fullName = firstName + " " + lastName;
