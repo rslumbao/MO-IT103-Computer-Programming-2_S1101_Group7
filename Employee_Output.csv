@@ -1,0 +1,35 @@
+EmpNo,LastName,FirstName,DailyRate,DaysWorked,Deductions,GrossPay,NetPay,Position
+10001,Garcia,Manuel III,4090.91,24.64,0.00,0.00,0.00,Chief Executive Officer
+10002,Lim,Antonio,2727.27,24.37,0.00,0.00,0.00,Chief Operating Officer
+10003,Aquino,Bianca Sofia,45.45,24.39,0.00,0.00,0.00,1,500
+10004,Reyes,Isabella,2727.27,24.32,0.00,0.00,0.00,Chief Marketing Officer
+10005,Hernandez,Eduard,2394.09,24.07,0.00,0.00,0.00,IT Operations and Systems
+10006,Villanueva,Andrea Mae,2394.09,24.32,0.00,0.00,0.00,HR Manager
+10007,San Jose,Brad,1953.41,24.31,0.00,0.00,0.00,HR Team Leader
+10008,Romualdez,Alice,1022.73,25.81,0.00,0.00,0.00,HR Rank and File
+10009,Atienza,Rosie,1022.73,24.67,0.00,0.00,0.00,HR Rank and File
+10010,Alvaro,Roderick,2394.09,24.36,0.00,0.00,0.00,Accounting Head
+10011,Salcedo,Anthony,2310.23,23.94,0.00,0.00,0.00,Payroll Manager
+10012,Lopez,Josie,1748.86,24.24,0.00,0.00,0.00,Payroll Team Leader
+10013,Farala,Martha,1090.91,24.32,0.00,0.00,0.00,Payroll Rank and File
+10014,Martinez,Leila,1090.91,24.50,0.00,0.00,0.00,Payroll Rank and File
+10015,Romualdez,Fredrick,2431.82,24.49,0.00,0.00,0.00,Account Manager
+10016,Mata,Christian,1953.41,24.47,0.00,0.00,0.00,Account Team Leader
+10017,De Leon,Selena,1902.27,24.57,0.00,0.00,0.00,Account Team Leader
+10018,San Jose,Allison,1022.73,24.18,0.00,0.00,0.00,Account Rank and File
+10019,Rosario,Cydney,1022.73,24.03,0.00,0.00,0.00,Account Rank and File
+10020,Bautista,Mark,1056.82,24.28,0.00,0.00,0.00,Account Rank and File
+10021,Lazaro,Darlene,1056.82,24.69,0.00,0.00,0.00,Account Rank and File
+10022,Delos Santos,Kolby,1090.91,24.44,0.00,0.00,0.00,Account Rank and File
+10023,Santos,Vella,1022.73,23.88,0.00,0.00,0.00,Account Rank and File
+10024,Del Rosario,Tomas,1022.73,24.35,0.00,0.00,0.00,Account Rank and File
+10025,Tolentino,Jacklyn,1090.91,24.19,0.00,0.00,0.00,Account Rank and File
+10026,Gutierrez,Percival,1125.00,24.68,0.00,0.00,0.00,Account Rank and File
+10027,Manalaysay,Garfield,1125.00,23.87,0.00,0.00,0.00,Account Rank and File
+10028,Villegas,Lizeth,1090.91,24.12,0.00,0.00,0.00,Account Rank and File
+10029,Ramos,Carol,1022.73,24.42,0.00,0.00,0.00,Account Rank and File
+10030,Maceda,Emelia,1022.73,24.56,0.00,0.00,0.00,Account Rank and File
+10031,Aguilar,Delia,1022.73,24.43,0.00,0.00,0.00,Account Rank and File
+10032,Castro,John Rafael,2394.09,24.30,0.00,0.00,0.00,Sales & Marketing
+10033,Martinez,Carlos Ian,2394.09,24.25,0.00,0.00,0.00,Supply Chain and Logistics
+10034,Santos,Beatriz,2394.09,24.72,0.00,0.00,0.00,Customer Service and Relations
